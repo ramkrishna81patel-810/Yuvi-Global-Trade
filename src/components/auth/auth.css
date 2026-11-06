@@ -1,0 +1,238 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+/* MAIN CONTAINER */
+
+.login-container {
+  display: flex;
+  width: 100%;
+  min-height: 100vh;
+  background: #fff;
+}
+
+/* LEFT IMAGE SECTION */
+
+.login-left {
+  width: 50%;
+  min-height: 100vh;
+
+  background-image: url("../../../public/images/png/Welcome\ Back\ to\ YUVI\ Paper\ Bags.png");
+
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-color: #542b0c;
+}
+
+/* RIGHT LOGIN SECTION */
+
+.login-right {
+  width: 50%;
+  min-height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 45px;
+  background: #fffefa;
+}
+
+.login-form {
+  width: 100%;
+  max-width: 500px;
+}
+
+/* BRAND LOGO */
+
+
+.brand-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 5px;
+  color: #78350f;
+}
+
+.brand-icon-box {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 75px;
+  height: 80px;
+}
+
+.brand-icon {
+  font-size: 75px !important;
+  color: #a65313;
+}
+
+.leaf-icon {
+  position: absolute;
+  font-size: 40px !important;
+  color: #4c9b32;
+  top: 23px;
+  right: 5px;
+}
+
+.brand-divider {
+  height: 75px;
+  width: 2px;
+  background: #78350f;
+}
+
+.brand-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.brand-title {
+  font-size: 38px !important;
+  font-weight: 900 !important;
+  line-height: 1 !important;
+  color: #78350f;
+  letter-spacing: 2px;
+}
+
+.brand-subtitle {
+  font-size: 25px !important;
+  font-weight: 900 !important;
+  line-height: 1.2 !important;
+  color: #78350f;
+}
+
+.brand-tagline {
+  font-size: 10px !important;
+  letter-spacing: 3px;
+  font-weight: bold !important;
+  color: #78350f;
+  margin-top: 10px !important;
+}
+
+
+/* FORM HEADING */
+
+
+
+.form-heading h3 {
+  color: #17243b;
+  margin-bottom: 8px;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+/* INPUT LABELS */
+
+.field-label {
+  font-weight: 600 !important;
+  margin-top: 18px !important;
+  margin-bottom: 5px !important;
+  color: #17243b;
+}
+
+/* TEXT FIELDS */
+
+.login-form .MuiOutlinedInput-root {
+  border-radius: 10px;
+  background: #fff;
+}
+
+.login-form .MuiOutlinedInput-root.Mui-focused fieldset {
+  border-color: #a65313;
+}
+
+.login-form .MuiInputAdornment-root {
+  color: #78350f;
+}
+
+/* FORGOT PASSWORD */
+
+.login-container .forgot-password {
+  display: flex;
+  justify-content: flex-end;
+
+  color: #a65313;
+  cursor: pointer;
+  font-weight: bold !important;
+}
+
+/* LOGIN BUTTON */
+
+.login-button {
+  border-radius: 10px !important;
+
+  background: linear-gradient(90deg,
+      #93400b,
+      #c16a12) !important;
+
+  font-size: 17px !important;
+  font-weight: bold !important;
+  text-transform: none !important;
+}
+
+.login-button:hover {
+  background: linear-gradient(90deg,
+      #78350f,
+      #a65313) !important;
+}
+
+/* SIGN UP */
+
+.signup-text {
+  text-align: center;
+  margin-top: 30px !important;
+  color: #344054;
+}
+
+.signup-text span {
+  color: #a65313;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 768px) {
+
+  .login-left {
+    display: none;
+  }
+
+  .login-right {
+    width: 100%;
+    padding: 25px;
+  }
+
+  .login-form {
+    max-width: 450px;
+  }
+
+  .brand-logo {
+    margin-bottom: 35px;
+  }
+}
+
+@media (max-width: 400px) {
+
+  .login-right {
+    padding: 18px;
+  }
+
+  .brand-logo {
+    gap: 10px;
+  }
+
+  .brand-icon {
+    font-size: 50px !important;
+  }
+
+}
