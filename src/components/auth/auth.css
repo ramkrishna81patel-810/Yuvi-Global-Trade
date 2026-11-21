@@ -26,10 +26,83 @@ body {
   background-image: url("../../../public/images/png/Welcome\ Back\ to\ YUVI\ Paper\ Bags.png");
 
   background-size: contain;
+
   background-position: center center;
   background-repeat: no-repeat;
   background-color: #542b0c;
 }
+
+
+
+.signup-container {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  width: 100%;
+  min-height: 100vh;
+  background: #fff;
+  align-items: stretch;
+}
+
+.signup-left {
+  width: 100%;
+  min-height: 100vh;
+  height: 100%;
+
+  background-image: url("../../../public/images/png/Yuvi\ Global\ Trade_\ Growing\ Worldwide.png");
+
+  /* Complete image without cropping */
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+
+  background-color: #542b0c;
+}
+
+.signup-right {
+  width: 100%;
+  min-height: 100vh;
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 35px 45px;
+  background: #fffefa;
+}
+
+.signup-form-wrapper {
+  width: 100%;
+  max-width: 480px;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .signup-container {
+    grid-template-columns: 40% 60%;
+  }
+
+  .signup-right {
+    padding: 25px;
+  }
+}
+
+@media (max-width: 650px) {
+  .signup-container {
+    grid-template-columns: 1fr;
+  }
+
+  .signup-left {
+    min-height: 300px;
+    height: 300px;
+  }
+
+  .signup-right {
+    min-height: 100vh;
+    padding: 25px 18px;
+  }
+}
+
 
 /* RIGHT LOGIN SECTION */
 
@@ -185,7 +258,6 @@ body {
       #a65313) !important;
 }
 
-/* SIGN UP */
 
 .signup-text {
   text-align: center;
@@ -199,7 +271,6 @@ body {
   cursor: pointer;
 }
 
-/* RESPONSIVE */
 
 @media (max-width: 768px) {
 
@@ -235,4 +306,208 @@ body {
     font-size: 50px !important;
   }
 
+}
+
+
+
+
+
+
+
+
+
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body,
+html {
+  height: 100%;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  background-color: #f4f6f8;
+}
+
+
+/* Brand Header */
+.brand-logo {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 1.5rem;
+}
+
+.brand-icon-box {
+  display: flex;
+  align-items: center;
+}
+
+.brand-divider {
+  width: 2px;
+  height: 48px;
+  background-color: #e2e8f0;
+}
+
+.brand-title {
+  font-weight: 800 !important;
+  font-size: 1.6rem !important;
+  color: #78350f !important;
+  line-height: 1 !important;
+  letter-spacing: 0.5px;
+}
+
+.brand-subtitle {
+  font-weight: 700 !important;
+  font-size: 0.95rem !important;
+  color: #c16a12 !important;
+  line-height: 1.2 !important;
+  letter-spacing: 1px;
+}
+
+.brand-tagline {
+  font-size: 0.65rem !important;
+  color: #4c9b32 !important;
+  font-weight: 700 !important;
+  letter-spacing: 1.5px;
+  margin-top: 2px !important;
+}
+
+/* Heading */
+.form-heading {
+  margin-bottom: 1.5rem;
+}
+
+.form-heading h4 {
+  color: #1e293b;
+  margin-bottom: 4px;
+}
+
+/* Input Field Styling */
+.field-label {
+  font-weight: 600 !important;
+  font-size: 0.875rem !important;
+  color: #334155 !important;
+  margin-top: 12px !important;
+  margin-bottom: 6px !important;
+}
+
+.MuiOutlinedInput-root {
+  border-radius: 8px !important;
+  background-color: #f8fafc;
+}
+
+.MuiOutlinedInput-root:hover fieldset {
+  border-color: #c16a12 !important;
+}
+
+.MuiOutlinedInput-root.Mui-focused fieldset {
+  border-color: #78350f !important;
+}
+
+.MuiInputAdornment-root svg {
+  color: #64748b;
+}
+
+
+/* Submit Button */
+.signup-button {
+  background-color: #78350f !important;
+  color: #ffffff !important;
+  padding: 10px 0 !important;
+  font-size: 0.95rem !important;
+  font-weight: 700 !important;
+  text-transform: none !important;
+  border-radius: 8px !important;
+  margin-top: 12px !important;
+  box-shadow: 0 4px 12px rgba(120, 53, 15, 0.25) !important;
+  transition: all 0.2s ease !important;
+}
+
+.signup-button:hover {
+  background-color: #5c280b !important;
+  box-shadow: 0 6px 16px rgba(120, 53, 15, 0.35) !important;
+}
+
+/* Footer Link */
+.signup-text {
+  text-align: center;
+  margin-top: 18px !important;
+  font-size: 0.875rem !important;
+  color: #64748b !important;
+}
+
+.signup-text span {
+  color: #c16a12;
+  font-weight: 700;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.signup-text span:hover {
+  color: #78350f;
+  text-decoration: underline;
+}
+
+
+
+.forgot-left {
+  width: 50%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.login-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+
+
+.send-button {
+  border-radius: 10px !important;
+
+  background: linear-gradient(90deg,
+      #93400b,
+      #c16a12) !important;
+
+  font-size: 17px !important;
+  font-weight: bold !important;
+  text-transform: none !important;
+  margin-top: 10px !important;
+}
+
+
+.login-container .otp-box {
+  width: 60px !important;
+  height: 60px !important;
+  font-size: 24px;
+  font-weight: 600;
+  text-align: center;
+  border: 2px solid #1976d2;
+  border-radius: 10px;
+  outline: none;
+  margin: 0 8px;
+  background-color: #fff;
+  color: #222;
+}
+
+.otp-box:focus {
+  border-color: #1565c0;
+  box-shadow: 0 0 5px rgba(25, 118, 210, 0.4);
+}
+
+.back-to-login {
+  display: flex;
+  justify-content: center;
+  text-decoration: underline;
+  margin-top: 15px;
+  color: #c16a12;
+  font-weight: bold;
+  cursor: pointer;
+  transition: color 0.2s ease;
 }

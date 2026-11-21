@@ -1,13 +1,24 @@
+import { ToastContainer } from 'react-toastify';
 import './App.css';
-import Login from './components/auth/login/Login';
+import AllRouter from './router/Router';
+import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
   return (
-   <div>
     <div>
-      <Login/>
+      <div>
+        <ToastContainer
+          position="top-right"
+          autoClose={3000}
+          hideProgressBar={false}
+          newestOnTop
+          closeOnClick
+          pauseOnHover
+          theme="colored"
+        />
+        <AllRouter />
+      </div>
     </div>
-   </div>
   );
 }
 

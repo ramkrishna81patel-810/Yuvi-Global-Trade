@@ -1,5 +1,5 @@
 
-import React from "react";
+import React, { useState } from "react";
 
 import {
     Box,
@@ -16,9 +16,12 @@ import LockIcon from "@mui/icons-material/Lock";
 import VisibilityIcon from "@mui/icons-material/Visibility";
 import VisibilityOffIcon from "@mui/icons-material/VisibilityOff";
 import LoginIcon from "@mui/icons-material/Login";
-import SpaIcon from "@mui/icons-material/Spa";
 
 import "../auth.css";
+import { useNavigate } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { loginUser } from "../../../redux-toolkit/feature/createSlice";
+import { toast } from "react-toastify";
 
 const YuviBagIcon = () => {
     return (
@@ -71,25 +74,58 @@ const YuviBagIcon = () => {
 };
 
 const Login = () => {
+    const {
+        user,
+        loading,
+        error,
+        success
+    } = useSelector((state) => state.auth);
+
+
+    const dispatch = useDispatch();
     const [showPassword, setShowPassword] = React.useState(false);
+    const [formData, setFormData] = useState({
+        email: '',
+        password: '',
+    });
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        console.log("Login submitted");
+    const handleChange = (e) => {
+        console.log("Input changed:", e.target.name, e.target.value);
+        setFormData({
+            ...formData,
+            [e.target.name]: e.target.value,
+        });
     };
+    const navigate = useNavigate();
+    const handleSubmit = async (e) => {
+        e.preventDefault();
 
+        try {
+            const result = await dispatch(
+                loginUser(formData)
+            ).unwrap();
+
+
+            if (result.status === 200) {
+                toast.success(result.message);
+                navigate('/dashboard');
+            }
+
+        } catch (error) {
+console.log("Login error:", error);
+
+            toast.error(error);
+
+        }
+    };
     return (
         <Box className="login-container">
 
-            {/* LEFT IMAGE SECTION */}
             <Box className="login-left" />
 
-            {/* RIGHT LOGIN SECTION */}
             <Box className="login-right">
 
                 <Box className="login-form">
-
-                    {/* BRAND LOGO */}
 
 
                     <Box className="brand-logo">
@@ -118,10 +154,9 @@ const Login = () => {
 
 
 
-                    {/* FORM HEADING */}
                     <Box className="form-heading">
 
-                        <Typography variant="h3" fontWeight="bold">
+                        <Typography variant="h3" fontWeight="bold" >
                             Sign In
                         </Typography>
 
@@ -133,15 +168,17 @@ const Login = () => {
 
                     <form onSubmit={handleSubmit}>
 
-                        {/* EMAIL */}
                         <Typography className="field-label">
                             Email Address
                         </Typography>
 
                         <TextField
+                            name="email"
                             fullWidth
                             placeholder="Enter your email"
                             type="email"
+                            value={formData.email}
+                            onChange={handleChange}
                             required
                             size="small"
                             slotProps={{
@@ -155,15 +192,17 @@ const Login = () => {
                             }}
                         />
 
-                        {/* PASSWORD */}
                         <Typography className="field-label">
                             Password
                         </Typography>
 
                         <TextField
+                            name="password"
                             fullWidth
                             placeholder="Enter your password"
                             type={showPassword ? "text" : "password"}
+                            value={formData.password}
+                            onChange={handleChange}
                             required
                             size="small"
                             slotProps={{
@@ -191,30 +230,31 @@ const Login = () => {
                             }}
                         />
 
-                        {/* FORGOT PASSWORD */}
                         <Box className="forgot-password" variant="span" >
-                            <Typography>
+                            <Typography onClick={() => navigate("/forgot-password")}>
                                 Forgot Password?
                             </Typography>
                         </Box>
 
-                        {/* LOGIN BUTTON */}
                         <Button
                             type="submit"
                             fullWidth
                             variant="contained"
                             startIcon={<LoginIcon />}
                             className="login-button"
+                            disabled={loading}
                         >
-                            Login
+
+                            {loading ? 'Please Wait...' : 'Login'}
                         </Button>
 
                     </form>
 
-                    {/* SIGN UP */}
                     <Typography className="signup-text">
                         Don't have an account?
-                        <span> Sign Up</span>
+                        <span onClick={() => navigate("/ragister")} >
+                            Sign Up
+                        </span>
                     </Typography>
 
                 </Box>
