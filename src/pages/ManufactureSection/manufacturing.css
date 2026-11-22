@@ -1,0 +1,256 @@
+/* Main Section */
+.manufacturing-section {
+    width: 100%;
+    padding: 85px 0;
+    background-color: #f7faf7;
+}
+
+/* Section Heading */
+.manufacturing-heading {
+    max-width: 750px;
+    margin: 0 auto 50px;
+    text-align: center;
+}
+
+.manufacturing-subtitle {
+    color: #198754;
+    font-size: 14px !important;
+    font-weight: 700 !important;
+    letter-spacing: 2px !important;
+    margin-bottom: 12px !important;
+}
+
+.manufacturing-title {
+    color: #164e36;
+    font-size: 36px !important;
+    font-weight: 800 !important;
+    line-height: 1.3 !important;
+    margin-bottom: 15px !important;
+}
+
+.manufacturing-description {
+    color: #666666;
+    font-size: 15px !important;
+    line-height: 1.8 !important;
+}
+
+/* Manufacturing Grid */
+.manufacturing-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+/* Manufacturing Card */
+.manufacturing-card {
+    height: 100%;
+    padding: 30px 25px;
+    background-color: #ffffff;
+    border: 1px solid #e8eee9;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+}
+
+.manufacturing-card:hover {
+    transform: translateY(-7px);
+    border-color: #198754;
+    box-shadow: 0 12px 30px rgba(22, 78, 54, 0.10);
+}
+
+/* Card Top */
+.manufacturing-card-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 22px;
+}
+
+.manufacturing-number {
+    font-size: 30px !important;
+    font-weight: 800 !important;
+    color: #cce5d5;
+}
+
+/* Icon */
+.manufacturing-icon {
+    width: 65px;
+    height: 65px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: #e8f5ec;
+    color: #198754;
+    transition: all 0.3s ease;
+}
+
+.manufacturing-icon svg {
+    font-size: 32px;
+}
+
+.manufacturing-card:hover .manufacturing-icon {
+    background-color: #198754;
+    color: #ffffff;
+}
+
+/* Card Heading */
+.manufacturing-card-title {
+    color: #164e36;
+    font-size: 19px !important;
+    font-weight: 700 !important;
+    margin-bottom: 12px !important;
+}
+
+/* Card Description */
+.manufacturing-card-description {
+    color: #777777;
+    font-size: 14px !important;
+    line-height: 1.8 !important;
+    margin-bottom: 20px !important;
+}
+
+/* Card Details */
+.manufacturing-card-details {
+    display: grid;
+    gap: 12px;
+}
+
+.manufacturing-detail-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.manufacturing-detail-item p {
+    font-size: 13px;
+    color: #555555;
+    line-height: 1.6;
+}
+
+/* Detail Bullet */
+.manufacturing-dot {
+    width: 7px;
+    height: 7px;
+    min-width: 7px;
+    margin-top: 7px;
+    border-radius: 50%;
+    background: #198754;
+}
+
+/* Bottom CTA */
+.manufacturing-cta {
+    margin-top: 50px;
+    padding: 35px 40px;
+    background: #edf7f0;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+}
+
+.manufacturing-cta-title {
+    font-size: 23px !important;
+    font-weight: 700 !important;
+    color: #075b3d;
+    margin-bottom: 10px !important;
+}
+
+.manufacturing-cta-description {
+    font-size: 15px !important;
+    color: #666666;
+    line-height: 1.7 !important;
+}
+
+/* CTA Button */
+.manufacturing-cta-button {
+    background: #168c57 !important;
+    color: #ffffff !important;
+    padding: 13px 28px !important;
+    border-radius: 7px !important;
+    font-weight: 600 !important;
+    text-transform: none !important;
+    white-space: nowrap;
+}
+
+.manufacturing-cta-button:hover {
+    background: #096b40 !important;
+}
+
+/* Tablet */
+@media (max-width: 991px) {
+    .manufacturing-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .manufacturing-title {
+        font-size: 30px !important;
+    }
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+    .manufacturing-section {
+        padding: 55px 0;
+    }
+
+    .manufacturing-heading {
+        margin-bottom: 35px;
+    }
+
+    .manufacturing-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+
+    .manufacturing-card {
+        padding: 20px 12px;
+    }
+
+    .manufacturing-card-title {
+        font-size: 15px !important;
+    }
+
+    .manufacturing-card-description {
+        font-size: 12px !important;
+    }
+
+    .manufacturing-detail-item p {
+        font-size: 12px;
+    }
+
+    .manufacturing-number {
+        font-size: 23px !important;
+    }
+
+    .manufacturing-icon {
+        width: 50px;
+        height: 50px;
+    }
+
+    .manufacturing-icon svg {
+        font-size: 26px;
+    }
+
+    .manufacturing-cta {
+        padding: 25px 20px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .manufacturing-cta-title {
+        font-size: 20px !important;
+    }
+
+    .manufacturing-cta-button {
+        width: 100%;
+    }
+}
+
+/* Small Mobile */
+@media (max-width: 380px) {
+    .manufacturing-grid {
+        grid-template-columns: 1fr;
+    }
+}

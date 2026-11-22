@@ -2,6 +2,7 @@ import { ToastContainer } from 'react-toastify';
 import './App.css';
 import AllRouter from './router/Router';
 import 'react-toastify/dist/ReactToastify.css';
+import './pages/pages.css';
 
 function App() {
   return (

@@ -1,0 +1,839 @@
+.layout {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background: #fffdf9
+}
+
+.layout-main {
+    flex: 1;
+    width: 100%
+}
+
+
+/* ==============================
+   HEADER MAIN
+============================== */
+
+.header-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+.yp-header {
+    position: sticky;
+    top: 0;
+    z-index: 1200;
+    background: rgba(255, 255, 255, 0.97) !important;
+    box-shadow: 0 2px 14px rgba(30, 60, 30, 0.07) !important;
+}
+
+/* ==============================
+   TOP BAR
+============================== */
+
+.yp-topbar {
+    background: #f3f7ed;
+    color: #465447;
+    padding: 0;
+}
+
+.yp-topbar-container {
+    min-height: 34px;
+    display: flex !important;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row !important;
+    gap: 15px;
+}
+
+.yp-topbar-container .MuiTypography-root {
+    font-size: 12px;
+    color: aliceblue;
+}
+
+/* ==============================
+   MAIN TOOLBAR
+============================== */
+
+.yp-toolbar {
+    min-height: 76px !important;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+/* ==============================
+   LOGO / BRAND
+============================== */
+
+.yp-brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    color: #1e3327;
+    text-decoration: none;
+    flex-shrink: 0;
+}
+
+.yp-brand-mark {
+    display: grid;
+    place-items: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 14px 14px 14px 4px;
+    background: #e5f0d9;
+    color: #367b2a;
+    font-size: 25px;
+    font-weight: 800;
+}
+
+.yp-brand-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.yp-brand-title {
+    display: block;
+    font-size: 19px !important;
+    font-weight: 800 !important;
+    line-height: 1.1 !important;
+    color: #1e3327;
+}
+
+.yp-brand-subtitle {
+    display: block;
+    font-size: 11px !important;
+    color: #74816f;
+    margin-top: 3px !important;
+}
+
+/* ==============================
+   DESKTOP NAVIGATION
+============================== */
+
+.yp-desktop-nav {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 12px;
+}
+
+.yp-nav-link {
+    color: #26352b !important;
+    font-size: 14px !important;
+    font-weight: 600 !important;
+    text-transform: none !important;
+    min-width: auto !important;
+    transition: color 0.2s ease;
+}
+
+.yp-nav-link:hover {
+    color: #4b8a35 !important;
+    background: transparent !important;
+}
+
+.yp-quote-btn {
+    background: #367b2a !important;
+    color: #fff !important;
+    font-size: 13px !important;
+    font-weight: 600 !important;
+    text-transform: none !important;
+    padding: 10px 18px !important;
+    border-radius: 7px !important;
+    white-space: nowrap;
+}
+
+.yp-quote-btn:hover {
+    background: #285f21 !important;
+}
+
+/* ==============================
+   MOBILE MENU BUTTON
+============================== */
+
+.yp-menu-btn {
+    display: none !important;
+    color: #2d6030 !important;
+}
+
+/* ==============================
+   MOBILE DRAWER
+============================== */
+
+.yp-mobile-drawer .MuiDrawer-paper {
+    width: 300px;
+    max-width: 85vw;
+    background: #fff;
+}
+
+.yp-drawer-content {
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.yp-drawer-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 18px;
+    border-bottom: 1px solid #e8eee5;
+}
+
+.yp-drawer-title {
+    font-size: 19px !important;
+    font-weight: 800 !important;
+    color: #1e3327;
+}
+
+.yp-drawer-list {
+    padding-top: 15px !important;
+}
+
+.yp-drawer-link {
+    border-radius: 7px !important;
+    margin-bottom: 5px !important;
+    color: #26352b !important;
+}
+
+.yp-drawer-link:hover {
+    background: #f3f7ed !important;
+    color: #367b2a !important;
+}
+
+.yp-drawer-quote {
+    margin-top: 15px !important;
+    background: #367b2a !important;
+    color: white !important;
+    border-radius: 7px !important;
+}
+
+.yp-drawer-quote:hover {
+    background: #285f21 !important;
+}
+
+/* ==============================
+   TABLET RESPONSIVE
+============================== */
+
+@media (max-width: 900px) {
+
+    .yp-toolbar {
+        min-height: 70px !important;
+    }
+
+    .yp-desktop-nav {
+        gap: 5px;
+    }
+
+    .yp-nav-link {
+        font-size: 12px !important;
+        padding: 6px 8px !important;
+    }
+
+    .yp-quote-btn {
+        padding: 9px 12px !important;
+        font-size: 12px !important;
+    }
+}
+
+/* ==============================
+   MOBILE RESPONSIVE
+============================== */
+
+@media (max-width: 767px) {
+
+    .yp-toolbar {
+        min-height: 68px !important;
+    }
+
+    .yp-desktop-nav {
+        display: none !important;
+    }
+
+    .yp-menu-btn {
+        display: inline-flex !important;
+    }
+
+    .yp-topbar {
+        display: none;
+    }
+
+    .yp-brand-mark {
+        width: 40px;
+        height: 40px;
+        font-size: 22px;
+    }
+
+    .yp-brand-title {
+        font-size: 17px !important;
+    }
+
+    .yp-brand-subtitle {
+        font-size: 10px !important;
+    }
+}
+
+/* ==============================
+   SMALL MOBILE
+============================== */
+
+@media (max-width: 380px) {
+
+    .yp-toolbar {
+        min-height: 62px !important;
+    }
+
+    .yp-brand {
+        gap: 7px;
+    }
+
+    .yp-brand-mark {
+        width: 36px;
+        height: 36px;
+        font-size: 20px;
+    }
+
+    .yp-brand-title {
+        font-size: 15px !important;
+    }
+
+    .yp-brand-subtitle {
+        font-size: 9px !important;
+    }
+
+    .yp-menu-btn {
+        padding: 6px !important;
+    }
+}
+
+
+.yp-socials {
+    display: flex;
+    gap: 8px;
+}
+
+.yp-socials a {
+    display: grid;
+    place-items: center;
+    width: 29px;
+    height: 29px;
+    border-radius: 50%;
+    background: #eaf2e2;
+    color: #4c8239;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 800;
+}
+
+
+/* ==============================
+   Footer Main
+============================== */
+
+.yp-footer {
+    width: 100%;
+    background: #164e36;
+    color: #ffffff;
+}
+
+/* Footer Grid */
+
+.footer-main {
+    padding-top: 65px;
+    padding-bottom: 55px;
+}
+
+/* ==============================
+   Company Information
+============================== */
+
+.footer-logo {
+    color: #ffffff !important;
+    font-size: 27px !important;
+    font-weight: 800 !important;
+    margin-bottom: 16px !important;
+}
+
+.footer-logo span {
+    color: #7ed6a4;
+}
+
+.footer-description {
+    max-width: 310px;
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 14px !important;
+    line-height: 1.9 !important;
+}
+
+.footer-social-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+    margin-top: 22px;
+}
+
+.footer-social-link {
+    color: #ffffff !important;
+    font-size: 13px !important;
+    font-weight: 500 !important;
+    transition: color 0.3s ease;
+}
+
+.footer-social-link:hover {
+    color: #7ed6a4 !important;
+}
+
+/* ==============================
+   Footer Headings
+============================== */
+
+.footer-heading {
+    color: #ffffff !important;
+    font-size: 17px !important;
+    font-weight: 700 !important;
+    margin-bottom: 22px !important;
+    position: relative;
+}
+
+.footer-heading::after {
+    content: "";
+    display: block;
+    width: 35px;
+    height: 3px;
+    background: #198754;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+/* ==============================
+   Footer Links
+============================== */
+
+.footer-link-list {
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+}
+
+.footer-link {
+    width: fit-content;
+    color: rgba(255, 255, 255, 0.75) !important;
+    font-size: 14px !important;
+    transition: all 0.3s ease;
+}
+
+.footer-link:hover {
+    color: #7ed6a4 !important;
+    transform: translateX(4px);
+}
+
+/* ==============================
+   Contact Information
+============================== */
+
+.footer-contact-list {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.footer-contact-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.footer-contact-item svg {
+    color: #7ed6a4;
+    font-size: 19px;
+    min-width: 19px;
+    margin-top: 2px;
+}
+
+.footer-contact-item p,
+.footer-contact-item a {
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 13px;
+    line-height: 1.7;
+    text-decoration: none;
+    word-break: break-word;
+}
+
+.footer-contact-item a:hover {
+    color: #7ed6a4;
+}
+
+/* ==============================
+   Enquiry Button
+============================== */
+
+.footer-enquiry-btn {
+    margin-top: 25px !important;
+    padding: 11px 18px !important;
+    background: #198754 !important;
+    color: #ffffff !important;
+    font-size: 13px !important;
+    font-weight: 600 !important;
+    text-transform: none !important;
+    border-radius: 7px !important;
+    box-shadow: none !important;
+}
+
+.footer-enquiry-btn:hover {
+    background: #096b40 !important;
+}
+
+/* ==============================
+   Footer Bottom
+============================== */
+
+.footer-divider {
+    border-color: rgba(255, 255, 255, 0.2) !important;
+}
+
+.footer-bottom {
+    min-height: 65px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    padding: 18px 0;
+}
+
+.footer-copyright,
+.footer-tagline {
+    color: rgba(255, 255, 255, 0.7) !important;
+    font-size: 12px !important;
+    line-height: 1.6 !important;
+}
+
+/* ==============================
+   Responsive
+============================== */
+
+@media (max-width: 991px) {
+
+    .footer-main {
+        padding-top: 50px;
+        padding-bottom: 40px;
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .footer-main {
+        padding-top: 40px;
+        padding-bottom: 35px;
+    }
+
+    .footer-logo {
+        font-size: 24px !important;
+    }
+
+    .footer-heading {
+        font-size: 16px !important;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+
+}
+
+@media (max-width: 380px) {
+
+    .footer-social-links {
+        gap: 12px;
+    }
+
+    .footer-description {
+        font-size: 13px !important;
+    }
+
+}
+
+
+
+/* Header Main */
+.yp-header {
+    background-color: #ffffff !important;
+    color: #222222 !important;
+    width: 100%;
+}
+
+/* Top Bar */
+.yp-topbar {
+    background-color: #164e36;
+    color: #ffffff;
+}
+
+.yp-topbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+
+/* Toolbar */
+.yp-toolbar {
+    min-height: 80px !important;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Brand */
+.yp-brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+    color: inherit;
+}
+
+.yp-brand-mark {
+    width: 45px;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #198754;
+    color: #ffffff;
+    font-size: 25px;
+    font-weight: 800;
+    border-radius: 10px;
+}
+
+.yp-brand-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.yp-brand-title {
+    font-size: 19px !important;
+    font-weight: 800 !important;
+    line-height: 1.2 !important;
+    color: #164e36;
+}
+
+.yp-brand-subtitle {
+    font-size: 12px !important;
+    color: #777777;
+}
+
+/* Desktop Navigation */
+.yp-desktop-nav {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-left: auto;
+}
+
+.yp-nav-link {
+    color: #333333 !important;
+    font-size: 14px !important;
+    font-weight: 600 !important;
+    text-transform: none !important;
+}
+
+.yp-nav-link:hover {
+    color: #198754 !important;
+    background-color: #f0f7f2 !important;
+}
+
+.yp-quote-btn {
+    background-color: #198754 !important;
+    color: #ffffff !important;
+    padding: 10px 20px !important;
+    border-radius: 6px !important;
+    text-transform: none !important;
+    font-weight: 600 !important;
+}
+
+.yp-quote-btn:hover {
+    background-color: #146c43 !important;
+}
+
+/* Mobile Menu */
+.yp-menu-btn {
+    margin-left: auto !important;
+    color: #164e36 !important;
+}
+
+/* Drawer */
+.yp-drawer-content {
+    width: 280px;
+    min-height: 100%;
+    background-color: #ffffff;
+}
+
+.yp-drawer-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+    border-bottom: 1px solid #eeeeee;
+}
+
+.yp-drawer-title {
+    font-size: 18px !important;
+    font-weight: 800 !important;
+    color: #164e36;
+}
+
+.yp-drawer-list {
+    padding: 10px !important;
+}
+
+.yp-drawer-link {
+    border-radius: 6px !important;
+    margin-bottom: 5px;
+    color: #333333;
+}
+
+.yp-drawer-link:hover {
+    background-color: #edf7f0 !important;
+    color: #198754;
+}
+
+.yp-drawer-quote {
+    margin-top: 10px;
+    background-color: #198754 !important;
+    color: #ffffff !important;
+    border-radius: 6px !important;
+}
+
+.yp-drawer-quote:hover {
+    background-color: #146c43 !important;
+}
+
+/* Responsive */
+@media (max-width: 767px) {
+    .yp-toolbar {
+        min-height: 70px !important;
+    }
+
+    .yp-brand-mark {
+        width: 40px;
+        height: 40px;
+        font-size: 22px;
+    }
+
+    .yp-brand-title {
+        font-size: 17px !important;
+    }
+}
+
+
+
+
+
+
+
+.hero-section {
+    width: 100%;
+    overflow: hidden;
+}
+
+.hero-swiper {
+    width: 100%;
+    height: 550px;
+}
+
+.hero-slide {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.hero-overlay {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(90deg,
+            rgba(0, 0, 0, 0.75),
+            rgba(0, 0, 0, 0.15));
+}
+
+.hero-content {
+    max-width: 650px;
+    color: #ffffff;
+}
+
+.hero-subtitle {
+    font-size: 14px !important;
+    font-weight: 700 !important;
+    letter-spacing: 2px !important;
+    color: #a5d6a7;
+    margin-bottom: 15px !important;
+}
+
+.hero-title {
+    font-size: 52px !important;
+    font-weight: 800 !important;
+    line-height: 1.15 !important;
+    margin-bottom: 20px !important;
+}
+
+.hero-description {
+    font-size: 18px !important;
+    line-height: 1.7 !important;
+    margin-bottom: 30px !important;
+}
+
+.hero-button {
+    background-color: #198754 !important;
+    padding: 13px 28px !important;
+    font-size: 15px !important;
+    font-weight: 700 !important;
+    text-transform: none !important;
+}
+
+.hero-button:hover {
+    background-color: #146c43 !important;
+}
+
+/* Swiper Navigation */
+.hero-swiper .swiper-button-next,
+.hero-swiper .swiper-button-prev {
+    color: #ffffff;
+}
+
+.hero-swiper .swiper-pagination-bullet {
+    background: #ffffff;
+    opacity: 0.7;
+}
+
+.hero-swiper .swiper-pagination-bullet-active {
+    background: #198754;
+    opacity: 1;
+}
+
+/* Responsive */
+@media (max-width: 767px) {
+    .hero-swiper {
+        height: 430px;
+    }
+
+    .hero-title {
+        font-size: 34px !important;
+    }
+
+    .hero-description {
+        font-size: 15px !important;
+    }
+
+    .hero-content {
+        padding: 20px;
+    }
+}
