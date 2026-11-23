@@ -1,0 +1,269 @@
+/* ==============================
+   Request Quote Section
+============================== */
+
+.request-quote-section {
+    width: 100%;
+    padding: 80px 0;
+    background: #f7faf7;
+}
+
+/* Main Wrapper */
+
+.quote-main-wrapper {
+    display: grid;
+    grid-template-columns: 0.85fr 1.5fr;
+    align-items: stretch;
+    background: #ffffff;
+    border: 1px solid #e8eee9;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 8px 35px rgba(22, 78, 54, 0.06);
+}
+
+/* ==============================
+   Left Information Section
+============================== */
+
+.quote-info-section {
+    padding: 45px 35px;
+    background: #164e36;
+    color: #ffffff;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.quote-info-icon {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.13);
+    border-radius: 12px;
+    margin-bottom: 30px;
+}
+
+.quote-info-icon svg {
+    font-size: 32px;
+    color: #7ed6a4;
+}
+
+.quote-info-subtitle {
+    color: #7ed6a4 !important;
+    font-size: 12px !important;
+    font-weight: 700 !important;
+    letter-spacing: 2px !important;
+    margin-bottom: 12px !important;
+}
+
+.quote-info-title {
+    color: #ffffff !important;
+    font-size: 32px !important;
+    font-weight: 800 !important;
+    margin-bottom: 18px !important;
+}
+
+.quote-info-description {
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 14px !important;
+    line-height: 1.9 !important;
+}
+
+.quote-benefits {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 35px;
+}
+
+.quote-benefit-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.quote-benefit-item svg {
+    color: #7ed6a4;
+    font-size: 20px;
+    min-width: 20px;
+}
+
+.quote-benefit-item p {
+    color: #ffffff;
+    font-size: 13px;
+}
+
+.quote-info-bottom {
+    margin-top: auto;
+    padding-top: 45px;
+}
+
+.quote-info-bottom p:first-child {
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 7px;
+}
+
+.quote-info-bottom p:last-child {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 13px;
+}
+
+/* ==============================
+   Quote Form
+============================== */
+
+.quote-form-section {
+    padding: 45px;
+}
+
+.quote-form-title {
+    color: #164e36 !important;
+    font-size: 26px !important;
+    font-weight: 700 !important;
+    margin-bottom: 10px !important;
+}
+
+.quote-form-description {
+    color: #777777;
+    font-size: 14px !important;
+    line-height: 1.7 !important;
+    margin-bottom: 30px !important;
+}
+
+.quote-form {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.quote-form-heading {
+    color: #164e36 !important;
+    font-size: 16px !important;
+    font-weight: 700 !important;
+    margin-bottom: -10px !important;
+}
+
+/* Input Fields */
+
+.quote-form .MuiOutlinedInput-root {
+    background: #ffffff;
+    border-radius: 8px;
+}
+
+.quote-form .MuiOutlinedInput-root:hover fieldset {
+    border-color: #198754;
+}
+
+.quote-form .MuiOutlinedInput-root.Mui-focused fieldset {
+    border-color: #198754;
+}
+
+.quote-form .MuiInputLabel-root.Mui-focused {
+    color: #198754;
+}
+
+/* Submit Button */
+
+.quote-submit-btn {
+    min-height: 50px;
+    background: #198754 !important;
+    color: #ffffff !important;
+    border-radius: 8px !important;
+    font-size: 14px !important;
+    font-weight: 700 !important;
+    text-transform: none !important;
+    box-shadow: none !important;
+}
+
+.quote-submit-btn:hover {
+    background: #096b40 !important;
+    box-shadow: none !important;
+}
+
+.quote-form-note {
+    color: #888888;
+    font-size: 12px !important;
+    text-align: center;
+    margin-top: -15px !important;
+}
+
+/* ==============================
+   Responsive Design
+============================== */
+
+@media (max-width: 991px) {
+
+    .request-quote-section {
+        padding: 60px 0;
+    }
+
+    .quote-main-wrapper {
+        grid-template-columns: 0.8fr 1.2fr;
+    }
+
+    .quote-info-section {
+        padding: 35px 25px;
+    }
+
+    .quote-form-section {
+        padding: 35px 25px;
+    }
+
+    .quote-info-title {
+        font-size: 27px !important;
+    }
+
+}
+
+@media (max-width: 767px) {
+
+    .request-quote-section {
+        padding: 45px 0;
+    }
+
+    .quote-main-wrapper {
+        grid-template-columns: 1fr;
+    }
+
+    .quote-info-section {
+        padding: 35px 25px;
+    }
+
+    .quote-form-section {
+        padding: 35px 22px;
+    }
+
+    .quote-info-title {
+        font-size: 28px !important;
+    }
+
+    .quote-info-bottom {
+        margin-top: 30px;
+        padding-top: 20px;
+    }
+
+}
+
+@media (max-width: 480px) {
+
+    .quote-info-section {
+        padding: 30px 20px;
+    }
+
+    .quote-form-section {
+        padding: 28px 18px;
+    }
+
+    .quote-form-title {
+        font-size: 22px !important;
+    }
+
+    .quote-info-title {
+        font-size: 25px !important;
+    }
+
+}

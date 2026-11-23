@@ -1,0 +1,86 @@
+
+.quality-section {
+    padding: 90px 0;
+    background: #f7faf7;
+}
+
+.quality-heading {
+    max-width: 700px;
+    margin: 0 auto 50px;
+    text-align: center;
+}
+
+.quality-subtitle {
+    color: #43845b;
+    font-weight: 700 !important;
+    letter-spacing: 2px !important;
+    margin-bottom: 12px !important;
+}
+
+.quality-title {
+    font-weight: 800 !important;
+    color: #193b2a;
+    margin-bottom: 18px !important;
+}
+
+.quality-title span {
+    color: #43845b;
+}
+
+.quality-description {
+    color: #6b756e;
+    line-height: 1.8 !important;
+}
+
+.quality-card {
+    height: 100%;
+    padding: 30px 24px;
+    background: #fff;
+    border: 1px solid #e7eee8;
+    border-radius: 14px;
+    transition: 0.3s ease;
+}
+
+.quality-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 12px 30px rgba(25, 59, 42, 0.09);
+}
+
+.quality-icon {
+    width: 58px;
+    height: 58px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #e8f3eb;
+    color: #43845b;
+    border-radius: 12px;
+    margin-bottom: 22px;
+}
+
+.quality-icon svg {
+    font-size: 30px;
+}
+
+.quality-card-title {
+    font-size: 19px !important;
+    font-weight: 700 !important;
+    color: #193b2a;
+    margin-bottom: 12px !important;
+}
+
+.quality-card-description {
+    color: #737d76;
+    font-size: 14px !important;
+    line-height: 1.8 !important;
+}
+
+@media (max-width: 600px) {
+    .quality-section {
+        padding: 60px 0;
+    }
+
+    .quality-title {
+        font-size: 30px !important;
+    }
+}

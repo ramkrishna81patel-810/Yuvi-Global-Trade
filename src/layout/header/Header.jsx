@@ -16,21 +16,47 @@ import {
 
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
+import { useNavigate } from "react-router-dom";
 
 
 const Header = () => {
   const [open, setOpen] = useState(false);
-
+  const navigate = useNavigate()
   const close = () => setOpen(false);
-
   const navItems = [
-    { label: "Home", href: "#home" },
-    { label: "About Us", href: "#about" },
-    { label: "Products", href: "#products" },
-    { label: "Why Us", href: "#why-us" },
-    { label: "Contact", href: "#contact" }
+    { label: "Home", href: "/" },
+    { label: "Products", href: "/products" },
+    { label: "About", href: "/about" },
+    // { label: "Quality", href: "/quality" },
+    // { label: "Manufacturing", href: "/manufacturing" },
+    // { label: "Customization", href: "/customization" },
+    // { label: "Industries", href: "/industries" },
+    // { label: "Sustainability", href: "/sustainability" },
+    { label: "Why Us", href: "/why-us" },
+    { label: "FAQ", href: "/faq" },
+    { label: "Contact", href: "/contact" },
   ];
+  const handleNavigation = (path) => {
+    close();
 
+    navigate(path);
+
+    const sectionId = path === "/"
+      ? "home"
+      : path.replace("/", "");
+
+    setTimeout(() => {
+      document.getElementById(sectionId)?.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    }, 100);
+  };
+
+
+  const handleNavClick = () => {
+    navigate('/request-quote')
+  }
   return (
     <Box className="header-wrapper">
 
@@ -82,8 +108,8 @@ const Header = () => {
               {navItems.map((item) => (
                 <Button
                   key={item.href}
+                  onClick={() => handleNavigation(item.href)}
                   color="inherit"
-                  href={item.href}
                   className="yp-nav-link"
                 >
                   {item.label}
@@ -92,13 +118,12 @@ const Header = () => {
 
               <Button
                 variant="contained"
-                href="#contact"
+                onClick={() => handleNavClick("/request-quote")}
                 className="yp-quote-btn"
               >
                 Request a Quote
               </Button>
             </Box>
-
             {/* Mobile Menu Button */}
             <IconButton
               className="yp-menu-btn d-md-none"

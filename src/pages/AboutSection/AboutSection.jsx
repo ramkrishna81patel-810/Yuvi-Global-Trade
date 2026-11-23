@@ -61,7 +61,8 @@ const features = [
 ];
 const AboutSection = () => {
     return (
-        <Box className="about-section" id="about">
+        <>
+          <Box className="about-section" id="about">
 
             <Container maxWidth="lg">
 
@@ -198,6 +199,8 @@ const AboutSection = () => {
             </Container>
 
         </Box>
+        </>
+      
 
     );
 };

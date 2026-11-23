@@ -1,0 +1,113 @@
+.sustainability-section {
+    padding: 90px 0;
+    background: #f4f8f3;
+}
+
+.sustainability-image-wrapper {
+    position: relative;
+    height: 490px;
+    border-radius: 18px;
+    overflow: hidden;
+}
+
+.sustainability-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.sustainability-image-label {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+    padding: 16px;
+    background: rgba(255, 255, 255, 0.94);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #43845b;
+    font-weight: 700;
+}
+
+.sustainability-image-label p {
+    font-weight: 700;
+    color: #193b2a;
+}
+
+.sustainability-subtitle {
+    color: #43845b;
+    font-weight: 700 !important;
+    letter-spacing: 2px !important;
+    margin-bottom: 14px !important;
+}
+
+.sustainability-title {
+    color: #193b2a;
+    font-weight: 800 !important;
+    margin-bottom: 18px !important;
+}
+
+.sustainability-title span {
+    color: #43845b;
+}
+
+.sustainability-description {
+    color: #737d76;
+    line-height: 1.8 !important;
+    margin-bottom: 28px !important;
+}
+
+.sustainability-features {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+.sustainability-feature {
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+}
+
+.sustainability-icon {
+    min-width: 48px;
+    height: 48px;
+    background: #e0eee2;
+    color: #43845b;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sustainability-icon svg {
+    font-size: 26px;
+}
+
+.sustainability-feature-title {
+    color: #193b2a;
+    font-weight: 700 !important;
+    margin-bottom: 5px !important;
+}
+
+.sustainability-feature-description {
+    color: #737d76;
+    font-size: 14px !important;
+    line-height: 1.7 !important;
+}
+
+@media (max-width: 600px) {
+    .sustainability-section {
+        padding: 60px 0;
+    }
+
+    .sustainability-image-wrapper {
+        height: 320px;
+    }
+
+    .sustainability-title {
+        font-size: 29px !important;
+    }
+}
