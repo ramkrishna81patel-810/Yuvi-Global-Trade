@@ -3,17 +3,8 @@ import React, { useState } from 'react';
 import {
     Box,
     Button,
-    IconButton,
-    InputAdornment,
-    TextField,
     Typography
 } from "@mui/material";
-import OtpInput from 'react-otp-input';
-import ShoppingBagIcon from "@mui/icons-material/ShoppingBag";
-import EmailIcon from "@mui/icons-material/Email";
-import LockIcon from "@mui/icons-material/Lock";
-import VisibilityIcon from "@mui/icons-material/Visibility";
-import VisibilityOffIcon from "@mui/icons-material/VisibilityOff";
 import LoginIcon from "@mui/icons-material/Login";
 
 import "../auth.css";
@@ -70,7 +61,6 @@ const YuviBagIcon = () => {
 };
 
 const VerifyOtp = () => {
-    const [showPassword, setShowPassword] = React.useState(false);
     const [otp, setOtp] = useState('');
     const navigate = useNavigate();
     const handleSubmit = (e) => {

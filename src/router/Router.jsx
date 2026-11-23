@@ -10,10 +10,6 @@ import VerifyOtp from '../components/auth/verfiyotp/VerifyOtp';
 import ResetPassword from '../components/auth/resetpassword/ResetPassword';
 import FeatureDetails from '../pages/WhyChoose/FeatureDetails';
 import RequestQuote from '../pages/RequestQuote/RequestQuote';
-import AboutSection from '../pages/AboutSection/AboutSection';
-import ProductSection from '../pages/productSection/ProductSection';
-import WhyChooseUs from '../pages/WhyChoose/WhyChooseUs';
-import ContactSection from '../pages/ContactSection/ContactSection';
 
 
 const AllRouter = () => {

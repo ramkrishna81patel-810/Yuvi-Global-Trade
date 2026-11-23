@@ -18,7 +18,6 @@ import VisibilityIcon from "@mui/icons-material/Visibility";
 import VisibilityOffIcon from "@mui/icons-material/VisibilityOff";
 import { useNavigate } from "react-router-dom";
 import "../auth.css";
-import LeftBanner from "../../../pages/images/YuviPaperBag";
 import { useDispatch } from "react-redux";
 import { registerUser } from "../../../redux-toolkit/feature/createSlice";
 import { toast } from "react-toastify";
@@ -62,7 +61,6 @@ const Register = () => {
     const navigate = useNavigate();
 
     const [showPassword, setShowPassword] = React.useState(false);
-    const [showConfirmPassword, setShowConfirmPassword] = React.useState(false);
 
     const [formData, setFormData] = React.useState({
         name: "",

@@ -10,7 +10,6 @@ import {
     Typography
 } from "@mui/material";
 
-import ShoppingBagIcon from "@mui/icons-material/ShoppingBag";
 import EmailIcon from "@mui/icons-material/Email";
 import LockIcon from "@mui/icons-material/Lock";
 import VisibilityIcon from "@mui/icons-material/Visibility";
@@ -74,12 +73,7 @@ const YuviBagIcon = () => {
 };
 
 const Login = () => {
-    const {
-        user,
-        loading,
-        error,
-        success
-    } = useSelector((state) => state.auth);
+    const { loading } = useSelector((state) => state.auth);
 
 
     const dispatch = useDispatch();

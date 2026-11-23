@@ -14,7 +14,6 @@ import {
     SupportAgent
 } from "@mui/icons-material";
 
-import CheckCircleIcon from "@mui/icons-material/CheckCircle";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import EcoFriendlyImage from '../images/eco-friendly.png';
 import customPrintingImage from '../images/custom-printing.png';

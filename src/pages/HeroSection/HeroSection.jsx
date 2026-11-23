@@ -1,6 +1,6 @@
 
 import React from "react";
-import { Box, Container, Typography, Button } from "@mui/material";
+import { Box, Container, Typography } from "@mui/material";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Navigation, Pagination, EffectFade } from "swiper/modules";
