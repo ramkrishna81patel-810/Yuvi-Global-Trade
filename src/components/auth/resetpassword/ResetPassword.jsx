@@ -9,8 +9,6 @@ import {
     Typography
 } from "@mui/material";
 
-import ShoppingBagIcon from "@mui/icons-material/ShoppingBag";
-import EmailIcon from "@mui/icons-material/Email";
 import LockIcon from "@mui/icons-material/Lock";
 import VisibilityIcon from "@mui/icons-material/Visibility";
 import VisibilityOffIcon from "@mui/icons-material/VisibilityOff";
